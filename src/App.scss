@@ -1,0 +1,94 @@
+$sidebar-width: 25vw;
+$border-radius: 30px;
+
+@mixin drop-shadow {
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 25%));
+}
+
+.btn {
+    padding: 1rem;
+    font-weight: bold;
+    background-color: #1CA345;
+    text-align: center;
+    border-radius: $border-radius;
+    user-select: none;
+    cursor: pointer;
+    &:hover {
+        filter: brightness(0.9);
+    }
+    &:active {
+        filter: brightness(0.7);
+    }
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: $sidebar-width;
+    background-color: #353A40;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    div {
+        margin: auto;
+    }
+    .logo {
+        text-align: left;
+        user-select: none;
+        cursor: pointer;
+        .title {
+            transition: 0.5s ease;
+            &:hover {
+                transform: translateY(-15%);
+            }
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .slogan {
+            font-size: 0.7rem;
+            color: gray;
+        }
+    }
+    .links {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-weight: bold;
+        .link {
+            border: 2px solid transparent;
+            border-bottom-color:rgba(0, 0, 0, 25%);
+            padding: 1rem;
+            cursor: pointer;
+            user-select: none;
+            &:last-child {
+                border-bottom-color: transparent;
+            }
+        }
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.content {
+    // margin-left: $sidebar-width;
+    display: flex;
+    flex-direction: row;
+}
+
+.content::before {
+    content: "";
+    width: $sidebar-width;
+    height: 100%;
+    display: block;
+    background-color: red;
+    margin: auto;
+}
+
+@import 'styles/home.scss'
