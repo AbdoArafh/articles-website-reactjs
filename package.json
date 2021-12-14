@@ -1,7 +1,7 @@
 {
-  "name": "articles-website",
+  "name": "articles-website-reactjs",
   "version": "0.0.0",
-  "homepage": "https://AbdoArafh.github.io/articles-website-reactjs",
+  "homepage": "https://AbdoArafh.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
